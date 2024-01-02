@@ -15,7 +15,8 @@ function calculator() {
 
         try {
             
-            toast.success("Success", { position: toast.POSITION.TOP_CENTER },SetData(eval(Data)))
+           SetData(eval(Data))
+    
 
         }
         catch {
@@ -28,10 +29,10 @@ function calculator() {
 
     const sin = () => {
         let SinResult = Math.sin((Math.PI * Data / 180))
-        toast.success("Success", { position: toast.POSITION.TOP_CENTER }, SetData(SinResult))
+         SetData(SinResult)
     }
     const tan = () => {
-        let TanRessult = Math.tan((Math.PI*Data/180))
+        let TanRessult = ((Math.PI*Data/180))
         SetData(TanRessult)
     }
     const cos = () => {
@@ -57,7 +58,7 @@ function calculator() {
             <h1 className='heading'>Calculator</h1>
             <div className='main-div'>
                 <div className='cal-div'>
-                    <input className='input' type="text" placeholder='0' value={Data} />
+                    <input className='input' type="text" placeholder='' value={Data} />
                     <div className='main-btn'>
                         <button className='btn btn3' onClick={Clear} >AC</button>
                         <button className='btn btn3' onClick={Back}  >C</button>
